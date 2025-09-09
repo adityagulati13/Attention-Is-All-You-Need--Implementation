@@ -31,7 +31,8 @@ def main():
 
     # Run translation
     output = translate(input_text)
-    print(f"\n🟢 Final Translation Output:\n{output}")
+    print(f"\nFinal Translation Output:\n{output}")
 
 if __name__ == "__main__":
     main()
+
