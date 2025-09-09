@@ -19,8 +19,8 @@ config = get_config()
 train_dataloader, val_dataloader, vocab_src, vocab_tgt = get_ds(config)
 model = get_model(config, vocab_src.get_vocab_size(), vocab_tgt.get_vocab_size()).to(device)
 
-# Load checkpoint (3rd epoch)
-model_filename = "/home/Alok/ml-projects/my_model/Helsinki-NLP/opus_books_weights/tmodel_best.pt"
+# Load checkpoint best
+model_filename = "model wts pth"
 state = torch.load(model_filename)
 model.load_state_dict(state['model_state_dict'])
 
@@ -130,3 +130,4 @@ print(" Attention maps saved as HTML. You can open them in your browser:")
 print(" - encoder_attention.html")
 print(" - decoder_attention.html")
 print(" - cross_attention.html")
+
